@@ -1,0 +1,67 @@
+{% load i18n %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'dashboard' %}">
+      <img src="/static/img/tatu-logo.png" alt="TATU Logo" height="30" class="d-inline-block align-top me-2">
+      TATU LMS
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/dashboard/' %}active{% endif %}" href="{% url 'dashboard' %}">
+              {% trans "Dashboard" %}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if '/courses/' in request.path %}active{% endif %}" href="{% url 'course_list' %}">
+              {% trans "Courses" %}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if '/schedule/' in request.path %}active{% endif %}" href="{% url 'schedule' %}">
+              {% trans "Schedule" %}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if '/assignments/' in request.path %}active{% endif %}" href="{% url 'assignment_list' %}">
+              {% trans "Assignments" %}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if '/exams/' in request.path %}active{% endif %}" href="{% url 'exam_list' %}">
+              {% trans "Exams" %}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if '/news/' in request.path %}active{% endif %}" href="{% url 'news_list' %}">
+              {% trans "News" %}
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+      <ul class="navbar-nav">
+        {% include "includes/language_switcher.html" %}
+        {% if user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ user.get_full_name|default:user.username }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'profile' %}">{% trans "Profile" %}</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
+            </ul>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">{% trans "Login" %}</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

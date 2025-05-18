@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Davomat - {{ course.name }}{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-light-blue text-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">{{ course.name }} - Davomat</h5>
+                    <a href="{% url 'attendance_stats' course.id %}" class="btn btn-sm btn-outline-light">
+                        Statistika
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h6 class="card-title">Umumiy davomat</h6>
+                                    <div class="progress mb-2" style="height: 20px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: {{ overall_stats.present_percent }}%;" aria-valuenow="{{ overall_stats.present_percent }}" aria-valuemin="0" aria-valuemax="100">
+                                            {{ overall_stats.present_percent }}%
+                                        </div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{ overall_stats.absent_percent }}%;" aria-valuenow="{{ overall_stats.absent_percent }}" aria-valuemin="0" aria-valuemax="100">
+                                            {{ overall_stats.absent_percent }}%
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-success">Qatnashdi: {{ overall_stats.present_count }}</small>
+                                        <small class="text-danger">Qatnashmadi: {{ overall_stats.absent_count }}</small>
+                                        <small class="text-muted">Jami: {{ overall_stats.total_records }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Sana</label>
+                            <input type="date" class="form-control" id="date" name="date" value="{{ selected_date|date:'Y-m-d' }}" required>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Talaba</th>
+                                        <th>ID</th>
+                                        <th>Guruh</th>
+                                        <th class="text-center">Davomat</th>
+                                        <th class="text-center">Umumiy %</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for student in students %}
+                                    <tr>
+                                        <td>{{ student.user.get_full_name }}</td>
+                                        <td>{{ student.student_id }}</td>
+                                        <td>{{ student.group }}</td>
+                                        <td class="text-center">
+                                            <div class="btn-group" role="group">
+                                                <input type="radio" class="btn-check" name="attendance_{{ student.id }}" id="present_{{ student.id }}" value="present" {% if attendance_dict.student.id %}checked{% endif %}>
+                                                <label class="btn btn-outline-success" for="present_{{ student.id }}">+</label>
+                                                
+                                                <input type="radio" class="btn-check" name="attendance_{{ student.id }}" id="absent_{{ student.id }}" value="absent" {% if attendance_dict.student.id == False %}checked{% endif %}>
+                                                <label class="btn btn-outline-danger" for="absent_{{ student.id }}">-</label>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="progress flex-grow-1" style="height: 10px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ student_stats.student.id.present_percent }}%;" aria-valuenow="{{ student_stats.student.id.present_percent }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="ms-2">{{ student_stats.student.id.present_percent }}%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="text-end mt-3">
+                            <button type="submit" class="btn btn-primary">Saqlash</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Dars jadvali - TATU LMS{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Dars jadvali</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-print me-1"></i> Chop etish
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-download me-1"></i> Export
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <i class="fas fa-calendar-alt me-2"></i> Haftalik dars jadvali
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Vaqt</th>
+                        <th>Dushanba</th>
+                        <th>Seshanba</th>
+                        <th>Chorshanba</th>
+                        <th>Payshanba</th>
+                        <th>Juma</th>
+                        <th>Shanba</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for time in "89101112131415161718"|make_list %}
+                        <tr>
+                            <td class="fw-bold text-center">{{ time }}:00</td>
+                            
+                            {% for day, schedules in schedule_by_day.items %}
+                                <td>
+                                    {% for schedule in schedules %}
+                                        {% if schedule.start_time.hour|stringformat:"i" == time %}
+                                            <div class="p-2 bg-primary bg-opacity-10 rounded border border-primary">
+                                                <strong>{{ schedule.course.code }}</strong><br>
+                                                <small>{{ schedule.room }}</small>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

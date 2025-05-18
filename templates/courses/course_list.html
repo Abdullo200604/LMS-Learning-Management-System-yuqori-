@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Mening fanlarim - TATU LMS{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Mening fanlarim</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-filter me-1"></i> Filtrlash
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-download me-1"></i> Export
+            </button>
+        </div>
+    </div>
+</div>
+
+{% if courses %}
+    <div class="row">
+        {% for course in courses %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 course-card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">{{ course.code }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ course.name }}</h5>
+                        <p class="card-text">{{ course.description|truncatewords:20 }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-info">{{ course.credits }} kredit</span>
+                            {% if user.is_teacher %}
+                                <span class="badge bg-success">{{ course.students.count }} talaba</span>
+                            {% else %}
+                                <span class="badge bg-success">{{ course.teacher.user.get_full_name }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <a href="{% url 'course_detail' course.id %}" class="btn btn-primary">
+                            <i class="fas fa-eye me-1"></i> Batafsil
+                        </a>
+                        <a href="{% url 'attendance' course.id %}" class="btn btn-outline-primary">
+                            <i class="fas fa-clipboard-check me-1"></i> Davomat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-info">
+        <i class="fas fa-info-circle me-2"></i> Hozirda sizda fanlar mavjud emas.
+    </div>
+{% endif %}
+{% endblock %}

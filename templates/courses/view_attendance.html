@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Davomat - {{ course.name }}{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-light-blue text-white">
+                    <h5 class="mb-0">{{ course.name }} - Davomat</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h6 class="card-title">Sizning davomatingiz</h6>
+                                    <div class="progress mb-2" style="height: 20px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: {{ attendance_stats.present_percent }}%;" aria-valuenow="{{ attendance_stats.present_percent }}" aria-valuemin="0" aria-valuemax="100">
+                                            {{ attendance_stats.present_percent }}%
+                                        </div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{ attendance_stats.absent_percent }}%;" aria-valuenow="{{ attendance_stats.absent_percent }}" aria-valuemin="0" aria-valuemax="100">
+                                            {{ attendance_stats.absent_percent }}%
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-success">Qatnashdi: {{ attendance_stats.present_count }}</small>
+                                        <small class="text-danger">Qatnashmadi: {{ attendance_stats.absent_count }}</small>
+                                        <small class="text-muted">Jami: {{ attendance_stats.total_classes }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% if attendances %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Sana</th>
+                                        <th class="text-center">Holat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for attendance in attendances %}
+                                    <tr>
+                                        <td>{{ attendance.date }}</td>
+                                        <td class="text-center">
+                                            {% if attendance.is_present %}
+                                                <span class="badge bg-success">Qatnashdi</span>
+                                            {% else %}
+                                                <span class="badge bg-danger">Qatnashmadi</span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info">
+                            Bu kurs uchun davomat ma'lumotlari yo'q.
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+<nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == '/dashboard/' %}active{% endif %}" href="{% url 'dashboard' %}">
+                    <i class="fas fa-tachometer-alt me-2"></i>
+                    Bosh sahifa
+                </a>
+            </li>
+            
+            {% if user.student_profile %}
+                <!-- Student Menu -->
+                <li class="nav-item">
+                    <a class="nav-link {% if '/courses/' in request.path %}active{% endif %}" href="{% url 'course_list' %}">
+                        <i class="fas fa-book me-2"></i>
+                        Kurslar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if '/schedule/' in request.path %}active{% endif %}" href="{% url 'schedule' %}">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        Dars jadvali
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if '/assignments/' in request.path %}active{% endif %}" href="{% url 'assignment_list' %}">
+                        <i class="fas fa-tasks me-2"></i>
+                        Topshiriqlar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if '/exams/' in request.path %}active{% endif %}" href="{% url 'exam_list' %}">
+                        <i class="fas fa-file-alt me-2"></i>
+                        Imtihonlar
+                    </a>
+                </li>
+            {% elif user.teacher_profile %}
+                <!-- Teacher Menu -->
+                <li class="nav-item">
+                    <a class="nav-link {% if '/courses/' in request.path %}active{% endif %}" href="{% url 'course_list' %}">
+                        <i class="fas fa-book me-2"></i>
+                        Kurslar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if '/schedule/' in request.path %}active{% endif %}" href="{% url 'schedule' %}">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        Dars jadvali
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if '/attendance/' in request.path %}active{% endif %}" href="{% url 'attendance_list' %}">
+                        <i class="fas fa-clipboard-check me-2"></i>
+                        Davomat
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if '/assignments/' in request.path %}active{% endif %}" href="{% url 'assignment_list' %}">
+                        <i class="fas fa-tasks me-2"></i>
+                        Topshiriqlar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if '/exams/' in request.path %}active{% endif %}" href="{% url 'exam_list' %}">
+                        <i class="fas fa-file-alt me-2"></i>
+                        Imtihonlar
+                    </a>
+                </li>
+            {% endif %}
+            
+            <!-- Common Menu -->
+            <li class="nav-item">
+                <a class="nav-link {% if '/news/' in request.path %}active{% endif %}" href="{% url 'news_list' %}">
+                    <i class="fas fa-newspaper me-2"></i>
+                    Yangiliklar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if '/profile/' in request.path %}active{% endif %}" href="{% url 'profile' %}">
+                    <i class="fas fa-user me-2"></i>
+                    Profil
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
