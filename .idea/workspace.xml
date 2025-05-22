@@ -5,17 +5,144 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fcaa38d-b4dd-4f66-8ad5-fff91b1d4504" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/start.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_demo.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run_demo.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_demo.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_demo.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LMS-Learning-Management-System-yuqori-.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/assignments.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/courses.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/assignments/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/courses/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/grades/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/news/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/schedule/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/students/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/surveys/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/tests/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/assignments/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/courses/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/exams/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/news/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/profile/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/schedule/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/study-plan/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/teacher/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/assignments.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/class-schedule.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/dashboard-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/dashboard-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/exams.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/login-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/my-courses.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/news-feed.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/student-profile.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/study-plan.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/teacher/login-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/teacher/teacher-courses.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/teacher/teacher-dashboard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/teacher/teacher-graduation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/teacher/teacher-students.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/teacher/teacher-surveys.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/teacher/teacher-tests.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/db.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms_tuit/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms_tuit/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms_tuit/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms_tuit/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms_tuit/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/placeholder-12t4q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/placeholder-6hpc2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/placeholder-806z2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/placeholder-cgmsq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/placeholder-e8mex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/placeholder-pukj4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/placeholder-q2x9q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/student-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/student-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/student-avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/student-profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tatu-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/teacher-avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/teacher-illustration.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_demo.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_demo.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/assignment_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/attendance_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/attendance_stats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/course_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/course_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/mark_attendance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/schedule.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/student_attendance_stats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/view_attendance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/exams/exam_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/messages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/sidebar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/news_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/teacher_dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FormatOnSaveOptions">
     <option name="myRunOnSave" value="false" />
@@ -43,95 +170,38 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2xDDh5lOJOM0kQv4OPEXQVVKcRH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\lwcar\\PycharmProjects\\LMS-Learning-Management-System-yuqori-\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lwcar\PycharmProjects\LMS-Learning-Management-System-yuqori-" />
     </key>
-  </component>
-  <component name="RunManager" selected="Django Server.LMS-Learning-Management-System-yuqori-">
-    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="LMS-Learning-Management-System-yuqori-" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LMS-Learning-Management-System-yuqori-" type="Python.DjangoServer" factoryName="Django server">
-      <module name="LMS-Learning-Management-System-yuqori-" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Next.js: server-side" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -150,7 +220,12 @@
       <updated>1747463867767</updated>
       <workItem from="1747463869113" duration="1487000" />
       <workItem from="1747561223001" duration="1866000" />
-      <workItem from="1747563907263" duration="1086000" />
+      <workItem from="1747563907263" duration="1581000" />
+      <workItem from="1747581295104" duration="612000" />
+      <workItem from="1747663641654" duration="300000" />
+      <workItem from="1747663960366" duration="106000" />
+      <workItem from="1747718543704" duration="7687000" />
+      <workItem from="1747893016318" duration="259000" />
     </task>
     <servers />
   </component>
